@@ -1,0 +1,13 @@
+---
+  - name: nginx playbook
+    hosts: 10.116.0.3
+    tasks: 
+      - name: nginx install
+        yum:
+          name: nginx
+          state: latest
+      - name: start and enabled nginx
+        systemd:
+          name: nginx
+          state: started
+          enabled: yes

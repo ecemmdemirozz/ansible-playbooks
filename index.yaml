@@ -1,0 +1,17 @@
+---
+  - name: Create index.html on nginx
+    hosts: 10.116.0.3
+    tasks:
+      - name: added lines in index.html
+        copy: 
+          dest: /usr/share/nginx/html/index.html
+          content: |
+            <!DOCTYPE html>
+            <html>
+            <body>
+
+            <h1>My Awesome Web Page!</h1>
+            <p>It worked.</p>
+
+            </body>
+            </html>
